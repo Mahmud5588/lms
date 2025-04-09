@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lms_project/core/route/route_names.dart';
+import 'package:lms_project/features/authentication/presentation/presentation/forgot_password/create_new_password.dart';
+import 'package:lms_project/features/authentication/presentation/presentation/forgot_password/forgot_password_page.dart';
+import 'package:lms_project/features/authentication/presentation/presentation/forgot_password/send_code.dart';
 import 'package:lms_project/features/authentication/presentation/presentation/on_borading/first_splash_page.dart';
 import 'package:lms_project/features/authentication/presentation/presentation/on_borading/on_boarding_page.dart';
 import 'package:lms_project/features/authentication/presentation/presentation/sign_in/login.dart';
@@ -25,6 +28,12 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => OnboardingScreen());
       case RouteNames.login:
         return MaterialPageRoute(builder: (_) => Login());
+      case RouteNames.forgotPasswordPage:
+        return MaterialPageRoute(builder: (_) => ForgotPasswordPage());
+      case RouteNames.sendCodePage:
+        return MaterialPageRoute(builder: (_) => SendCodePage());
+      case RouteNames.createNewPassword:
+        return MaterialPageRoute(builder: (_) => CreateNewPassword());
 
       default:
         return _defaultRoute();

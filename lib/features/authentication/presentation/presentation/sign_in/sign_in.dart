@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lms_project/core/route/route_names.dart';
 import 'package:lms_project/features/authentication/presentation/widget/continue_with_button.dart';
 import 'package:lms_project/features/authentication/presentation/widget/my_elevated_button.dart';
 
@@ -13,7 +14,7 @@ class SignIn extends StatelessWidget {
         elevation: 0,
         leading: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.black),
         ),
       ),
       backgroundColor: Colors.white,
@@ -68,7 +69,9 @@ class SignIn extends StatelessWidget {
                 SizedBox(height: 30),
                 MyElevatedButton(
                   text: "Sign in with password",
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, RouteNames.login);
+                  },
                 ),
 
                 SizedBox(height: 30),
@@ -79,7 +82,12 @@ class SignIn extends StatelessWidget {
                       "Don't have an account?",
                       style: TextStyle(color: Colors.grey),
                     ),
-                    TextButton(onPressed: () {}, child: Text("Sign up")),
+                    TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, RouteNames.signUp);
+                      },
+                      child: Text("Sign up"),
+                    ),
                   ],
                 ),
               ],
